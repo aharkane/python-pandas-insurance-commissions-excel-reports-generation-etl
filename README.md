@@ -151,6 +151,3 @@ Ce projet peut être adapté pour:
 - Tableaux de bord de performance commerciale
 - Audit et réconciliation de données financières
 
----
-
-*Ce projet illustre des compétences pratiques en automatisation de processus financiers et en analyse de données avec Python.*
