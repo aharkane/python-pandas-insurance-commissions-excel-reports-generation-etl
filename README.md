@@ -142,12 +142,3 @@ for Nom_courtier in df2['Nom courtier'].unique():
 - Code propre et documenté
 - Gestion d'erreurs potentielles
 
-## Cas d'usage
-
-Ce projet peut être adapté pour:
-- Analyse de commissions d'autres secteurs (immobilier, courtage)
-- Génération automatique de rapports comptables
-- Distribution de données personnalisées par entité
-- Tableaux de bord de performance commerciale
-- Audit et réconciliation de données financières
-
