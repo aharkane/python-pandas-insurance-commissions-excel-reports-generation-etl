@@ -11,6 +11,49 @@ Un projet d'**automatisation et d'analyse de données** utilisant Python pour tr
 - Générer automatiquement des fichiers Excel individuels pour chaque courtier
 - Faciliter l'analyse des performances commerciales par type de produit d'assurance
 
+## Réalisations clés
+
+✓ Agrégation de données de commissions multi-courtiers  
+✓ Automatisation complète du processus ETL (Extract-Transform-Load)  
+✓ Génération automatique de 7 fichiers Excel individuels  
+✓ Organisation des données par type d'affaire avec onglets séparés  
+✓ Gestion des commissions positives et négatives (reprises)  
+✓ Code réutilisable et modulaire pour d'autres analyses similaires  
+
+## Compétences démontrées
+<table>
+<tr>
+<td width="55%" valign="top">
+  
+**Manipulation de données:**
+- Lecture et écriture de fichiers Excel avec Pandas
+- Agrégation avec groupby et fonctions d'agrégation (sum)
+- Réinitialisation d'index avec reset_index
+- Filtrage de DataFrames avec conditions booléennes
+
+**Automatisation:**
+- Boucles itératives sur valeurs uniques
+- Génération dynamique de fichiers
+- Gestion de système de fichiers avec os.makedirs
+- Context managers (with statement) pour gestion de ressources
+</td>
+<td width="50%" valign="top">
+  
+**Traitement financier:**
+- Calcul de totaux de commissions
+- Gestion des valeurs négatives (reprises)
+- Segmentation par type de produit d'assurance
+- Reporting structuré par entité commerciale
+
+**Développement Python:**
+- Programmation Jupyter Notebook
+- Utilisation de bibliothèques scientifiques (Pandas, NumPy)
+- Code propre et documenté
+- Gestion d'erreurs potentielles
+</td>
+</tr>
+</table>
+
 ## Stack technologique
 
 | Composant | Technologie |
@@ -22,6 +65,21 @@ Un projet d'**automatisation et d'analyse de données** utilisant Python pour tr
 | **Automatisation** | Boucles itératives, os.makedirs |
 
 ## Données analysées
+## Structure du dépôt
+
+```
+├── analyse-commissions-courtiers.ipynb
+├── produits-courtiers.xlsx
+├── Fichiers/
+│   ├── Courtier001.xlsx
+│   ├── Courtier002.xlsx
+│   ├── Courtier003.xlsx
+│   ├── Courtier004.xlsx
+│   ├── Courtier005.xlsx
+│   ├── Courtier006.xlsx
+│   └── Courtier007.xlsx
+└── README.md
+```
 
 **Fichier source: produits-courtiers.xlsx**
 - Données de commissions d'assurance multi-courtiers
@@ -91,54 +149,4 @@ for Nom_courtier in df2['Nom courtier'].unique():
              .to_excel(writer, sheet_name=str(Type_affaire)))
 ```
 
-## Réalisations clés
-
-✓ Agrégation de données de commissions multi-courtiers  
-✓ Automatisation complète du processus ETL (Extract-Transform-Load)  
-✓ Génération automatique de 7 fichiers Excel individuels  
-✓ Organisation des données par type d'affaire avec onglets séparés  
-✓ Gestion des commissions positives et négatives (reprises)  
-✓ Code réutilisable et modulaire pour d'autres analyses similaires  
-
-## Structure du dépôt
-
-```
-├── analyse-commissions-courtiers.ipynb
-├── produits-courtiers.xlsx
-├── Fichiers/
-│   ├── Courtier001.xlsx
-│   ├── Courtier002.xlsx
-│   ├── Courtier003.xlsx
-│   ├── Courtier004.xlsx
-│   ├── Courtier005.xlsx
-│   ├── Courtier006.xlsx
-│   └── Courtier007.xlsx
-└── README.md
-```
-
-## Compétences démontrées
-
-**Manipulation de données:**
-- Lecture et écriture de fichiers Excel avec Pandas
-- Agrégation avec groupby et fonctions d'agrégation (sum)
-- Réinitialisation d'index avec reset_index
-- Filtrage de DataFrames avec conditions booléennes
-
-**Automatisation:**
-- Boucles itératives sur valeurs uniques
-- Génération dynamique de fichiers
-- Gestion de système de fichiers avec os.makedirs
-- Context managers (with statement) pour gestion de ressources
-
-**Traitement financier:**
-- Calcul de totaux de commissions
-- Gestion des valeurs négatives (reprises)
-- Segmentation par type de produit d'assurance
-- Reporting structuré par entité commerciale
-
-**Développement Python:**
-- Programmation Jupyter Notebook
-- Utilisation de bibliothèques scientifiques (Pandas, NumPy)
-- Code propre et documenté
-- Gestion d'erreurs potentielles
 
