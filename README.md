@@ -1,4 +1,4 @@
-# Analyse des Commissions Courtiers
+# Gestion et Analyse des Commissions Courtiers avec Reporting par Courtier et Type d’Affaire
 
 ## Synthèse exécutive
 
@@ -14,12 +14,13 @@ Un projet d'**automatisation et d'analyse de données** utilisant Python pour tr
 - Faciliter l'analyse des performances commerciales par type de produit d'assurance
 
 **Réalisations et Compétences**
-✓ Automatisation complète du processus ETL pour extraction, transformation et génération de fichiers Excel individuels
-✓ Agrégation et traitement des commissions multi-courtiers, y compris la gestion des valeurs positives et négatives (reprises)
-✓ Utilisation de Python (Pandas, NumPy) pour lecture/écriture Excel, agrégations, filtrage et réinitialisation d’index
-✓ Génération de rapports structurés par courtier et type de produit d’assurance
-✓ Développement de code réutilisable et modulaire, documenté et maintenable
-✓ Gestion dynamique des fichiers et boucles itératives avec os.makedirs et context managers (with)
+
+- ✓ Automatisation complète du processus ETL pour extraction, transformation et génération de fichiers Excel individuels
+- ✓ Agrégation et traitement des commissions multi-courtiers, y compris la gestion des valeurs positives et négatives (reprises)
+- ✓ Utilisation de Python (Pandas, NumPy) pour lecture/écriture Excel, agrégations, filtrage et réinitialisation d’index
+- ✓ Génération de rapports structurés par courtier et type de produit d’assurance
+- ✓ Développement de code réutilisable et modulaire, documenté et maintenable
+- ✓ Gestion dynamique des fichiers et boucles itératives avec os.makedirs et context managers (with)    
 
 **Structure du dépôt**
 
@@ -27,13 +28,7 @@ Un projet d'**automatisation et d'analyse de données** utilisant Python pour tr
 ├── analyse-commissions-courtiers.ipynb
 ├── produits-courtiers.xlsx
 ├── Fichiers/
-│   ├── Courtier001.xlsx
-│   ├── Courtier002.xlsx
-│   ├── Courtier003.xlsx
-│   ├── Courtier004.xlsx
-│   ├── Courtier005.xlsx
-│   ├── Courtier006.xlsx
-│   └── Courtier007.xlsx
+│   
 └── README.md
 ```
 
@@ -118,5 +113,18 @@ for Nom_courtier in df2['Nom courtier'].unique():
             (df_courtier[df_courtier['Type d\'affaire'] == Type_affaire]
              .to_excel(writer, sheet_name=str(Type_affaire)))
 ```
+**Résultat de la structure du fichier des classeurs**
 
+```
+├── ...
+├── Fichiers/
+│   ├── Courtier001.xlsx
+│   ├── Courtier002.xlsx
+│   ├── Courtier003.xlsx
+│   ├── Courtier004.xlsx
+│   ├── Courtier005.xlsx
+│   ├── Courtier006.xlsx
+│   └── Courtier007.xlsx
+└ ...
+```
 
